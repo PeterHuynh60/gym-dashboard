@@ -1,0 +1,170 @@
+{
+  "name": "Restart Block 1 (Sept 2026)",
+  "rampWeeksCount": 4,
+  "weekdayByDayLabel": {
+    "Day 1": 1,
+    "Day 2": 3,
+    "Day 3": 5
+  },
+  "days": [
+    {
+      "label": "Day 1",
+      "exercises": [
+        {
+          "exercise": "Barbell Squat to Box (FULL SIT)",
+          "mode": "rpe",
+          "rampSets": "4",
+          "rampReps": "5",
+          "startRpe": 7,
+          "rpeIncrement": 0.5,
+          "pushSets": "1",
+          "pushReps": "3",
+          "deloadSets": "3",
+          "deloadReps": "5",
+          "deloadReduction": 2
+        },
+        {
+          "exercise": "Barbell Good Mornings",
+          "mode": "rpe",
+          "rampSets": "3",
+          "rampReps": "8",
+          "startRpe": 6.5,
+          "rpeIncrement": 0.25,
+          "pushSets": "1",
+          "pushReps": "8",
+          "deloadSets": "2",
+          "deloadReps": "8",
+          "deloadReduction": 1.5
+        },
+        {
+          "exercise": "BSS",
+          "mode": "static",
+          "rampSets": "3",
+          "rampReps": "8-12/side",
+          "staticTarget": "2RIR",
+          "pushSets": "2",
+          "pushReps": "8/side",
+          "deloadSets": "2",
+          "deloadReps": "10/side"
+        },
+        {
+          "exercise": "Hollow Body Flutter Kicks",
+          "mode": "static",
+          "rampSets": "3",
+          "rampReps": "20-25 seconds",
+          "staticTarget": "BW",
+          "pushSets": "3",
+          "pushReps": "20-25 seconds",
+          "deloadSets": "2",
+          "deloadReps": "20 seconds"
+        }
+      ]
+    },
+    {
+      "label": "Day 2",
+      "exercises": [
+        {
+          "exercise": "Bench Press w/ Pause",
+          "mode": "rpe",
+          "rampSets": "4",
+          "rampReps": "5",
+          "startRpe": 7,
+          "rpeIncrement": 0.5,
+          "pushSets": "1",
+          "pushReps": "3",
+          "deloadSets": "3",
+          "deloadReps": "5",
+          "deloadReduction": 2
+        },
+        {
+          "exercise": "Seated Cable Row",
+          "mode": "static",
+          "rampSets": "3",
+          "rampReps": "8-12",
+          "staticTarget": "2RIR",
+          "pushSets": "3",
+          "pushReps": "6-8",
+          "deloadSets": "2",
+          "deloadReps": "10"
+        },
+        {
+          "exercise": "DB Tricep Overhead Extension",
+          "mode": "static",
+          "rampSets": "3",
+          "rampReps": "10-12",
+          "staticTarget": "2RIR",
+          "pushSets": "3",
+          "pushReps": "8",
+          "deloadSets": "2",
+          "deloadReps": "12"
+        },
+        {
+          "exercise": "Band-Assisted Pull Ups",
+          "mode": "static",
+          "rampSets": "3",
+          "rampReps": "6-10",
+          "staticTarget": "2RIR",
+          "pushSets": "3",
+          "pushReps": "5-6",
+          "deloadSets": "2",
+          "deloadReps": "8"
+        }
+      ]
+    },
+    {
+      "label": "Day 3",
+      "exercises": [
+        {
+          "exercise": "Barbell Front Squat",
+          "mode": "rpe",
+          "rampSets": "3",
+          "rampReps": "6",
+          "startRpe": 6.5,
+          "rpeIncrement": 0.5,
+          "pushSets": "1",
+          "pushReps": "3",
+          "deloadSets": "2",
+          "deloadReps": "6",
+          "deloadReduction": 2
+        },
+        {
+          "exercise": "Deadlift",
+          "mode": "rpe",
+          "rampSets": "4",
+          "rampReps": "5",
+          "startRpe": 7,
+          "rpeIncrement": 0.5,
+          "pushSets": "1",
+          "pushReps": "2",
+          "deloadSets": "3",
+          "deloadReps": "5",
+          "deloadReduction": 2.5
+        },
+        {
+          "exercise": "Close-Grip Bench Press (touch & go)",
+          "mode": "rpe",
+          "rampSets": "3",
+          "rampReps": "8",
+          "startRpe": 6.5,
+          "rpeIncrement": 0.5,
+          "pushSets": "1",
+          "pushReps": "5",
+          "deloadSets": "2",
+          "deloadReps": "8",
+          "deloadReduction": 2
+        },
+        {
+          "exercise": "DB Zottman Curls",
+          "mode": "static",
+          "rampSets": "3",
+          "rampReps": "10-12",
+          "staticTarget": "2RIR",
+          "pushSets": "3",
+          "pushReps": "8",
+          "deloadSets": "2",
+          "deloadReps": "12"
+        }
+      ]
+    }
+  ]
+}

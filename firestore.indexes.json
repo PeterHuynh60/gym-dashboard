@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "exerciseEntries",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "exercise", "order": "ASCENDING" },
+        { "fieldPath": "date", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

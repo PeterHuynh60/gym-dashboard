@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Dashboard</title>
+    <script>
+      // Applied before React mounts, so a returning user who picked dark
+      // doesn't see a flash of light mode first. Default (no saved value,
+      // or storage unavailable) is light.
+      try {
+        if (localStorage.getItem('gym-dashboard-theme') === 'dark') {
+          document.documentElement.classList.add('dark')
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

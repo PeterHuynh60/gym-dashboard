@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+/* Dark mode is opt-in via a `.dark` class on <html>, toggled manually,
+   rather than following the OS's prefers-color-scheme. Defaults to light. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Brand green, matching bet.huynh.place and home.huynh.place (both share
+   theme-color #55c278; #77ce93/#48a869 are the lighter/darker shades
+   already used on those sites). Rest of the ramp is extrapolated on the
+   same hue for a full scale. */
+@theme {
+  --color-brand-50: #eefbf3;
+  --color-brand-100: #d7f5e3;
+  --color-brand-200: #aeeac8;
+  --color-brand-300: #8fdfae;
+  --color-brand-400: #77ce93;
+  --color-brand-500: #55c278;
+  --color-brand-600: #48a869;
+  --color-brand-700: #357d4f;
+  --color-brand-800: #285f3c;
+  --color-brand-900: #1c422a;
+}
