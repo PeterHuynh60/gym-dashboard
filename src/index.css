@@ -1,14 +1,17 @@
 @import 'tailwindcss';
 
-/* Dark mode is opt-in via a `.dark` class on <html>, toggled manually,
-   rather than following the OS's prefers-color-scheme. Defaults to light. */
+/* Dark mode is opt-in via a `.dark` class on <html>. It mirrors the shared huynh.place theme
+   (data-theme="dark", set by https://huynh.place/shared/huynh-ui.js), so the choice is shared with
+   the main site, B.E.T., Home Search HQ and Video Reviews. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Brand green, matching bet.huynh.place and home.huynh.place (both share
-   theme-color #55c278; #77ce93/#48a869 are the lighter/darker shades
-   already used on those sites). Rest of the ramp is extrapolated on the
-   same hue for a full scale. */
+/* Shared huynh.place design system: brand greens, fonts, and a neutral scale whose key steps equal
+   the shared tokens (page background, surfaces, borders, muted text in light and dark), so the
+   existing bg-/border-/text-neutral-* classes line up with the other apps. */
 @theme {
+  --font-sans: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
   --color-brand-50: #eefbf3;
   --color-brand-100: #d7f5e3;
   --color-brand-200: #aeeac8;
@@ -19,4 +22,31 @@
   --color-brand-700: #357d4f;
   --color-brand-800: #285f3c;
   --color-brand-900: #1c422a;
+
+  --color-neutral-50: #f4f8f5;   /* = --hu-bg (light) */
+  --color-neutral-100: #e4e8e6;
+  --color-neutral-200: #dee2e6;  /* = --hu-border (light) */
+  --color-neutral-300: #c8cfd4;
+  --color-neutral-400: #9a9fa8;  /* = --hu-muted (dark) */
+  --color-neutral-500: #6c757d;  /* = --hu-muted (light) */
+  --color-neutral-600: #4b5359;
+  --color-neutral-700: #343840;
+  --color-neutral-800: #2a2d33;  /* = --hu-border (dark) */
+  --color-neutral-900: #1a1d22;  /* = --hu-surface (dark) */
+  --color-neutral-950: #121417;  /* = --hu-bg (dark) */
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+  body {
+    background: var(--hu-bg, #f4f8f5);
+    color: var(--hu-text, #212529);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
 }

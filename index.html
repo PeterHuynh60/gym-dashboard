@@ -2,18 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gym Dashboard</title>
+    <!-- Shared huynh.place design system (fonts, colors, header) + light/dark theme shared across
+         *.huynh.place, applied before React mounts so there's no flash of the wrong theme. -->
+    <link href="https://huynh.place/shared/huynh-ui.css" rel="stylesheet" />
+    <script src="https://huynh.place/shared/huynh-ui.js"></script>
     <script>
-      // Applied before React mounts, so a returning user who picked dark
-      // doesn't see a flash of light mode first. Default (no saved value,
-      // or storage unavailable) is light.
-      try {
-        if (localStorage.getItem('gym-dashboard-theme') === 'dark') {
-          document.documentElement.classList.add('dark')
-        }
-      } catch {}
+      // Tailwind's dark: variant keys off a `.dark` class; mirror the shared theme into it.
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        document.documentElement.classList.add('dark')
+      }
     </script>
   </head>
   <body>

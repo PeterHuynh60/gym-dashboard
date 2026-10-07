@@ -23,14 +23,12 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 px-4">
+    <div className="flex items-center justify-center px-4 py-16">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-sm bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 p-6"
       >
-        <h1 className="text-xl font-semibold text-brand-700 dark:text-brand-400 mb-1">
-          Gym Dashboard
-        </h1>
+        <h2 className="text-2xl font-bold text-brand-700 dark:text-brand-400 mb-1">Sign in</h2>
         <p className="text-sm text-neutral-500 mb-6">Sign in to log your workout.</p>
 
         <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">

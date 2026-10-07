@@ -1,35 +1,33 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
+// The theme is the shared huynh.place one (https://huynh.place/shared/huynh-ui.js, loaded in
+// index.html): one light/dark choice across the main site, B.E.T., Home Search HQ, Video Reviews
+// and this app. This context mirrors it into React state and into Tailwind's `.dark` class.
 const ThemeContext = createContext(undefined)
-const STORAGE_KEY = 'gym-dashboard-theme'
 
-function getInitialTheme() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY)
-    if (saved === 'light' || saved === 'dark') return saved
-  } catch {
-    // localStorage unavailable (private browsing, etc.) — fall through.
-  }
-  return 'light' // default to light regardless of OS preference
+function sharedTheme() {
+  return window.HuynhUI ? window.HuynhUI.getTheme() : 'light'
 }
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(getInitialTheme)
+  const [theme, setTheme] = useState(sharedTheme)
+
+  useEffect(() => {
+    const sync = () => setTheme(sharedTheme())
+    document.addEventListener('hu-themechange', sync)
+    return () => document.removeEventListener('hu-themechange', sync)
+  }, [])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark')
-    try {
-      localStorage.setItem(STORAGE_KEY, theme)
-    } catch {
-      // ignore write failures
-    }
   }, [theme])
 
-  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+  const toggleTheme = () => {
+    if (window.HuynhUI) window.HuynhUI.toggleTheme() // fires hu-themechange -> sync
+    else setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+  }
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
-  )
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
 }
 
 export function useTheme() {
