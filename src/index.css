@@ -49,4 +49,9 @@
   h3 {
     font-family: var(--font-heading);
   }
+  /* Section and dialog headings uppercase, like the main site */
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
 }

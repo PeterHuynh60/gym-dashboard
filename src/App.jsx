@@ -16,9 +16,6 @@ function AppShell({ actions, children }) {
             ← huynh.place
           </a>
           <div className="hu-app-id">
-            <span className="hu-app-icon" aria-hidden="true">
-              🏋️
-            </span>
             <div>
               <h1 className="hu-app-name">Gym Dashboard</h1>
             </div>
